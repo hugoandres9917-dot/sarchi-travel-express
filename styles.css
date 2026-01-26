@@ -47,22 +47,37 @@ nav a:hover {
   color: #ffd54f;
 }
 
+/* Animation for moving background */
+@keyframes scrollBackground {
+  0% {
+    background-position: 0% 0%, 25% 0%, 50% 0%, 75% 0%;
+  }
+  100% {
+    background-position: -100% 0%, -75% 0%, -50% 0%, -25% 0%;
+  }
+}
+
 /* Hero Section */
 .hero {
-  background: url("carreta.jpeg") center/cover no-repeat;
-  color: #fff;
-  text-align: center;
-  padding: 6rem 4rem;
+  background: url("LOGOPAGINA.jpeg") center/cover no-repeat;
+  color: #000000;
+  text-align: left;
+  padding: 2rem 4rem 12rem 4rem;
+  min-height: 400px;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 2.0rem;
+  margin-bottom: 1rem;
 }
 
 /* Sections */
@@ -170,6 +185,83 @@ h2 {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gallery & Comments Section */
+#gallery {
+  background-color: #f5f5f5;
+}
+
+#gallery h3 {
+  color: #00695c;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.gallery-section {
+  margin-bottom: 3rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+.comments-section {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.comment {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #00695c;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.comment-header strong {
+  color: #004d40;
+  font-size: 1.1rem;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.comment p {
+  color: #555;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 /* Booking Form */
