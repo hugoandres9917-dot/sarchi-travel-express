@@ -15,124 +15,38 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "TravelAgency",
   "name": "Sarchí Travel Express",
-  "image": "https://sarchitravelexpress.com/LOGOPAGINA.JPEG",
+  "url": "https://sarchitravelexpress.com",
+  "logo": "https://sarchitravelexpress.com/logo.png",
+  "image": "https://sarchitravelexpress.com/hero.jpg",
+  "description": "Private shuttle and tour company in Costa Rica offering airport transfers, exclusive tours, and bilingual drivers.",
   "telephone": "+50660530702",
   "email": "hugo.andres9917@gmail.com",
-  "url": "https://sarchitravelexpress.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Sarchí Centro",
-    "addressLocality": "Sarchí",
-    "addressRegion": "Alajuela",
-    "postalCode": "21201",
+    "streetAddress": "Sarchí Norte",
+    "addressLocality": "Alajuela",
     "addressCountry": "Costa Rica"
   },
-  "priceRange": "$$",
-  "openingHours": "Mo-Su 08:00-20:00",
   "sameAs": [
     "https://www.facebook.com/sarchitravelexpress",
     "https://www.instagram.com/sarchitravelexpress"
   ],
-  "description": "Private shuttle and exclusive tours across Costa Rica. Safe, reliable, and personalized transfers since 2009.",
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 10.1000,
-    "longitude": -84.3167
-  },
-  "serviceArea": {
-    "@type": "Place",
-    "name": "Costa Rica"
-  },
-  "makesOffer": [
+  "areaServed": "Costa Rica",
+  "priceRange": "$$",
+  "offers": [
     {
       "@type": "Offer",
-      "price": "120",
-      "priceCurrency": "USD",
       "itemOffered": {
         "@type": "TouristTrip",
         "name": "Arenal Volcano Shuttle",
-        "description": "Private transfer from San José to Arenal Volcano with hot springs and nature stops.",
-        "touristType": "International and local travelers"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "150",
+        "description": "Private shuttle to Arenal Volcano with bilingual driver.",
+        "image": "https://sarchitravelexpress.com/arenal.jpg"
+      },
+      "price": "120",
       "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Guanacaste Beaches Tour",
-        "description": "Surfing, resorts, diving, snorkeling, and fishing in Guanacaste.",
-        "touristType": "Beach lovers and adventure seekers"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "140",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Monteverde Cloud Forest Tour",
-        "description": "Bird watching, canopy tours, and night walks in Monteverde.",
-        "touristType": "Nature enthusiasts"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "130",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Manuel Antonio National Park Tour",
-        "description": "Wildlife viewing, surfing, and beach relaxation in Manuel Antonio.",
-        "touristType": "Families and eco-tourists"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "160",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Caribbean Coast Tour",
-        "description": "Explore Tortuguero, Cahuita, Puerto Viejo, and Manzanillo.",
-        "touristType": "Adventure travelers"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "100",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "La Paz Waterfall Gardens Tour",
-        "description": "Exotic animals, waterfalls, and rainforest exploration.",
-        "touristType": "Nature lovers"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "90",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Coffee & Chocolate Tour",
-        "description": "Learn about coffee and chocolate production in Costa Rica.",
-        "touristType": "Food and culture enthusiasts"
-      }
-    },
-    {
-      "@type": "Offer",
-      "price": "110",
-      "priceCurrency": "USD",
-      "itemOffered": {
-        "@type": "TouristTrip",
-        "name": "Poás Volcano National Park Tour",
-        "description": "Hiking and nature exploration at Poás Volcano.",
-        "touristType": "Adventure and eco-tourists"
-      }
+      "availability": "https://schema.org/InStock"
     }
   ]
 }
@@ -338,42 +252,53 @@
   </section>
 
   <!-- Booking Form -->
-  <section id="booking">
-    <h2>Book Your Shuttle</h2>
-    <form id="bookingForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone / WhatsApp:</label>
-      <input type="tel" id="phone" name="phone"  pattern="^\+[1-9][0-9]{7,14}$" required title="requires a leading + and at least 8 digits">
-
-      <label for="pickup">Pickup Location:</label>
-      <input type="text" id="pickup" name="pickup" required>
-
-      <label for="dropoff">Drop-off Location:</label>
-      <input type="text" id="dropoff" name="dropoff" required>
-
-      <label for="date">Travel Date:</label>
-      <input type="date" id="date" name="date" required>
-
-      <label for="time">Pickup Time:</label>
-      <input type="time" id="time" name="time" required>
-
-      <label for="passengers">Number of Passengers:</label>
-      <input type="number" id="passengers" name="passengers" min="1" max="11" required>
-
-      <label for="notes">Special Requests:</label>
-      <textarea id="notes" name="notes"></textarea>
-
-      <button type="submit" aria-label="Send booking request via WhatsApp">
-        <img src="whatsapp.png" alt="" style="height:20px; vertical-align:middle; margin-right:8px;">
-        Send via WhatsApp
-      </button>  
-      </form>
-  </section>
+<!-- Booking Form -->
+<form class="booking-form" action="https://formspree.io/f/yourFormID" method="POST">
+  
+  <!-- Name -->
+  <label for="name">Name / Nombre</label>
+  <input type="text" id="name" name="name" placeholder="Your full name" required>
+  
+  <!-- Email or WhatsApp -->
+  <label for="contact">Email / WhatsApp</label>
+  <input type="text" id="contact" name="contact" placeholder="example@email.com or +506 8888 8888" required>
+  
+  <!-- Pickup Location -->
+  <label for="pickup">Pickup Location / Lugar de Recogida</label>
+  <input type="text" id="pickup" name="pickup" placeholder="Hotel, Airport, City" required>
+  
+  <!-- Destination Dropdown -->
+  <label for="destination">Destination / Destino</label>
+  <select id="destination" name="destination" required>
+    <option value="">Select a destination</option>
+    <option value="Arenal Volcano">Arenal Volcano</option>
+    <option value="Monteverde">Monteverde</option>
+    <option value="Manuel Antonio">Manuel Antonio</option>
+    <option value="Guanacaste Beaches">Guanacaste Beaches</option>
+    <option value="Caribbean Coast">Caribbean Coast</option>
+    <option value="Poás Volcano">Poás Volcano</option>
+  </select>
+  
+  <!-- Date -->
+  <label for="date">Date / Fecha</label>
+  <input type="date" id="date" name="date" required>
+  
+  <!-- Time -->
+  <label for="time">Time / Hora</label>
+  <input type="time" id="time" name="time" required>
+  
+  <!-- Submit Button -->
+  <button type="submit" class="btn-submit">Book Now / Reservar</button>
+  
+  <!-- WhatsApp Quick Book -->
+  <a href="https://wa.me/50660530702?text=I%20want%20to%20book%20a%20shuttle" 
+    class="btn-whatsapp" target="_blank">
+    📲 Book via WhatsApp
+  </a>
+  
+  <!-- Trust Message -->
+  <p class="trust-message">✅ Secure Booking – We reply within 15 minutes via WhatsApp</p>
+</form>
 
   <!-- Contact -->
   <section id="contact" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem;">
@@ -436,4 +361,3 @@
   </script>
 </body>
 </html>
-
