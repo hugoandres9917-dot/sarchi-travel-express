@@ -14,36 +14,62 @@ body {
 }
 
 /* Header */
+/* Estilos generales del header */
 header {
-  background: #00695c;
-  color: #fff;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky;       /* se queda fijo al hacer scroll */
+  top: 0;                 /* pegado arriba */
+  width: 100%;
+  background: #ffffff;    /* fondo blanco limpio */
+  z-index: 1000;          /* encima del contenido */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra sutil */
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* Logo */
 header .logo {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #2c3e50;         /* tono elegante */
+  padding: 15px 20px;
 }
 
+/* Navegación */
 header nav ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  margin: 0;
+  padding: 0;
+  display: flex;          /* menú horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;              /* espacio entre enlaces */
 }
 
-header nav a {
-  color: #fff;
+header nav ul li a {
   text-decoration: none;
+  color: #2c3e50;
   font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
-header nav a:hover {
-  text-decoration: underline;
+/* Efecto hover */
+header nav ul li a:hover {
+  background: #27ae60;    /* verde turístico */
+  color: #fff;
 }
 
+/* Responsive: menú en móviles */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  header .logo {
+    text-align: center;
+  }
+}
 /* Hero */
 .hero {
   background: url('LOGOPAGINA.jpeg') center/cover no-repeat;
