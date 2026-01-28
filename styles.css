@@ -15,21 +15,22 @@ body {
 
 /* Header */
 /* Estilos generales del header */
+/* Estilos generales del header */
 header {
-  position: sticky;       /* se queda fijo al hacer scroll */
-  top: 0;                 /* pegado arriba */
+  position: sticky;
+  top: 0;
   width: 100%;
-  background: #ffffff;    /* fondo blanco limpio */
-  z-index: 1000;          /* encima del contenido */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* sombra sutil */
+  background: #fef6e4; /* fondo beige claro como base artesanal */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 /* Logo */
 header .logo {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #2c3e50;         /* tono elegante */
+  color: #d62828; /* rojo carreta */
   padding: 15px 20px;
 }
 
@@ -38,28 +39,28 @@ header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;          /* menú horizontal */
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;              /* espacio entre enlaces */
+  gap: 20px;
 }
 
 header nav ul li a {
   text-decoration: none;
-  color: #2c3e50;
-  font-weight: 500;
+  color: #003049; /* azul carreta */
+  font-weight: 600;
   padding: 10px 15px;
   transition: all 0.3s ease;
   border-radius: 5px;
 }
 
-/* Efecto hover */
+/* Hover con colores vibrantes */
 header nav ul li a:hover {
-  background: #27ae60;    /* verde turístico */
+  background: #f77f00; /* naranja carreta */
   color: #fff;
 }
 
-/* Responsive: menú en móviles */
+/* Responsive para móviles */
 @media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
@@ -75,7 +76,7 @@ header nav ul li a:hover {
   background: url('LOGOPAGINA.jpeg') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 150px 20px;
+  padding: 200px 20px;
 }
 
 .hero h1 {
