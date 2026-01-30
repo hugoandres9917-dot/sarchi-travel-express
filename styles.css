@@ -5,78 +5,129 @@
   box-sizing: border-box;
 }
 
+/* Variables de color */
+:root {
+  --color-primary: #00695c;
+  --color-primary-dark: #004d40;
+  --color-accent: #f77f00;
+  --color-red: #d62828;
+  --color-blue: #003049;
+  --color-bg: #f9f9f9;
+}
+
 /* Tipografía y colores generales */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
+  background-color: var(--color-bg);
 }
 
 /* Header */
-/* Estilos generales del header */
-/* Estilos generales del header */
 header {
   position: sticky;
   top: 0;
   width: 100%;
-  background: #fef6e4; /* fondo beige claro como base artesanal */
+  background: #fef6e4;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 /* Logo */
 header .logo {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #d62828; /* rojo carreta */
+  color: var(--color-red);
   padding: 15px 20px;
 }
 
 /* Navegación */
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  gap: 15px;
+  list-style: none;
 }
 
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
-  color: #003049; /* azul carreta */
+  color: var(--color-blue);
   font-weight: 600;
   padding: 10px 15px;
   transition: all 0.3s ease;
   border-radius: 5px;
 }
 
-/* Hover con colores vibrantes */
-header nav ul li a:hover {
-  background: #f77f00; /* naranja carreta */
+nav ul li a:hover {
+  background: var(--color-accent);
   color: #fff;
 }
 
-/* Responsive para móviles */
+/* Botón hamburguesa */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive navegación */
 @media (max-width: 768px) {
-  header nav ul {
+  nav ul {
+    display: none;
     flex-direction: column;
-    gap: 10px;
-    padding-bottom: 10px;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #ccc;
   }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
   header .logo {
     text-align: center;
   }
 }
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 /* Hero */
 .hero {
+  position: relative;
   background: url('LOGOPAGINA.jpeg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 200px 20px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero h1, .hero p {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
@@ -98,7 +149,7 @@ section {
 h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #00695c;
+  color: var(--color-primary);
 }
 
 /* Cards */
@@ -146,7 +197,7 @@ h2 {
 }
 
 .destination h3 {
-  color: #004d40;
+  color: var(--color-primary-dark);
   margin-bottom: 10px;
 }
 
@@ -154,7 +205,7 @@ h2 {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 18px;
-  background: #00695c;
+  background: var(--color-primary);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -162,8 +213,9 @@ h2 {
 }
 
 .destination .btn:hover {
-  background: #004d40;
+  background: var(--color-primary-dark);
 }
+
 /* Tabla de destinos */
 .destinations-table {
   width: 100%;
@@ -180,7 +232,7 @@ h2 {
 }
 
 .destinations-table thead {
-  background-color: #00695c;
+  background-color: var(--color-primary);
   color: #fff;
 }
 
@@ -195,9 +247,10 @@ h2 {
 
 .destinations-table td:first-child {
   font-weight: 600;
-  color: #004d40;
+  color: var(--color-primary-dark);
 }
 
+/* About */
 .about {
   display: flex;
   align-items: center;
@@ -215,12 +268,13 @@ h2 {
 }
 
 .about-image img {
-  max-width: 350px;   /* antes estaba en 500px */
-  width: 100%;        /* se adapta al contenedor */
-  height: auto;       /* mantiene proporción */
-  border-radius: 8px; /* opcional: esquinas redondeadas */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* opcional: sombra ligera */
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
 /* Gallery */
 .gallery {
   display: grid;
@@ -231,8 +285,8 @@ h2 {
 
 .gallery img {
   width: 100%;
-  height: 280px;        /* altura fija para uniformidad */
-  object-fit: cover;    /* recorta sin deformar */
+  aspect-ratio: 4/3;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -270,7 +324,6 @@ h2 {
   line-height: 1.4;
 }
 
-
 /* Booking Form */
 .booking-form {
   background: #fff;
@@ -300,7 +353,7 @@ h2 {
   width: 48%;
   padding: 12px;
   margin: 8px 1%;
-  background: #00695c;
+  background: var(--color-primary);
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -311,7 +364,7 @@ h2 {
 }
 
 .btn-submit:hover {
-  background: #004d40;
+  background: var(--color-primary-dark);
 }
 
 .trust-message {
@@ -320,6 +373,9 @@ h2 {
   color: #444;
   text-align: center;
 }
+
+
+
 
 /* Contact & Footer */
 #contact {
@@ -375,4 +431,62 @@ footer {
   margin-top: 6px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+/* Estilos generales */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Menú normal en escritorio */
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+/* Responsive: en móviles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* oculto por defecto */
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* debajo del header */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+
+  nav ul.active {
+    display: flex; /* se muestra cuando se activa */
+  }
+}
+nav {
+  display: none; /* oculto por defecto */
+}
+
+nav.active {
+  display: block; /* se muestra cuando tiene la clase active */
+}
+
+/* Opcional: estilos para móviles */
+@media (min-width: 768px) {
+  nav {
+    display: block; /* en pantallas grandes siempre visible */
+  }
+  .menu-toggle {
+    display: none; /* ocultar botón hamburguesa en escritorio */
+  }
 }

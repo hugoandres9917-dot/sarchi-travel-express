@@ -36,26 +36,17 @@
         <!-- Header -->
         <header>
             <div class="logo">Sarchí Travel Express / Private Shuttle Service</div>
+    
+    <!-- Botón hamburguesa -->
+            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
             <nav aria-label="Main navigation">
                 <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a href="#destinations">Destinations</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#booking">Booking</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -284,68 +275,73 @@
             </section>
             <!-- Booking Form -->
             <section id="booking">
-                <h2>Book Your Shuttle</h2>
-                <form id="bookingForm" class="booking-form" action="https://formspree.io/f/mdagjvby" method="POST">
-    
-                    <label for="name">Name / Nombre</label>
-                    <input type="text" id="name" name="name" required>
+    <h2>Book Your Shuttle</h2>
+    <form id="bookingForm" class="booking-form" action="https://formspree.io/f/mdagjvby" method="POST">
 
-                    <label for="email">Email </label>
-                    <input type="email" id="email" name="email" required>
-                
-                    <label for="people">People / Personas</label>
-                    <input type="number" id="people" name="people" required>
+        <label for="name">Name / Nombre</label>
+        <input type="text" id="name" name="name" required>
 
-                    <label for="pickup">Pickup Location / Lugar de Recogida</label>
-                    <input type="text" id="pickup" name="pickup" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-                    <label for="destination">Destination / Destino</label>
-                    <select id="destination" name="destination" required>
-                        <option value="">Select a destination</option>
-                        <option value="Arenal Volcano">Arenal Volcano</option>
-                        <option value="Monteverde">Monteverde</option>
-                        <option value="Manuel Antonio">Manuel Antonio</option>
-                        <option value="Guanacaste Beaches">Guanacaste Beaches</option>
-                        <option value="Caribbean Coast">Caribbean Coast</option>
-                        <option value="Poás Volcano">Poás Volcano</option>
-                        <option value="San Jose International Airport">San Jose International Airport</option>
-                        <option value="Liberia International Airport">Liberia International Airport</option>
-                        <option value="Sansa Domestic Flights">Sansa Domestic Flights</option>
-                        <option value="Other">Other</option>
-                    </select> 
-                    <!-- Contenedor oculto -->
-                        <div id="other-destination-container" style="display:none; margin-top:10px;">
-                            <label for="other-destination">Please specify your destination / Por favor especifique su destino</label>
-                            <input type="text" id="other-destination" name="other-destination">
-                        </div>
-                    <label for="message">Additional Notes / Mensaje adicional</label>
-                    <textarea id="message" name="message" placeholder="Any extra info or drop-off details..."></textarea>
+        <label for="people">People / Personas</label>
+        <input type="number" id="people" name="people" required>
 
+        <label for="pickup">Pickup Location / Lugar de Recogida</label>
+        <input type="text" id="pickup" name="pickup" required>
 
-                    <label for="date">Date / Fecha</label>
-                    <input type="date" id="date" name="date" required>
+        <label for="destination">Destination / Destino</label>
+        <select id="destination" name="destination" required>
+            <option value="">Select a destination</option>
+            <option value="Arenal Volcano">Arenal Volcano</option>
+            <option value="Monteverde">Monteverde</option>
+            <option value="Manuel Antonio">Manuel Antonio</option>
+            <option value="Guanacaste Beaches">Guanacaste Beaches</option>
+            <option value="Caribbean Coast">Caribbean Coast</option>
+            <option value="Poás Volcano">Poás Volcano</option>
+            <option value="San Jose International Airport">San Jose International Airport</option>
+            <option value="Liberia International Airport">Liberia International Airport</option>
+            <option value="Sansa Domestic Flights">Sansa Domestic Flights</option>
+            <option value="Other">Other</option>
+        </select>
 
-                    <label for="time">Time / Hora</label>
-                    <input type="time" id="time" name="time" required>
-                </form>
+        <!-- Campo destino alternativo -->
+        <div id="other-destination-container" style="display:none; margin-top:10px;">
+            <label for="other-destination">Please specify your destination / Por favor especifique su destino</label>
+            <input type="text" id="other-destination" name="other-destination">
+        </div>
 
-  <!-- Mensaje de confirmación -->
-                <p id="form-success" style="display:none; color:green; font-weight:bold; margin-top:20px; text-align:center;">
-                ✅ Tu reserva fue enviada con éxito. Te contactaremos pronto.
-                </p>
-            </section> 
+        <label for="message">Additional Notes / Mensaje adicional</label>
+        <textarea id="message" name="message" placeholder="Any extra info or drop-off details..."></textarea>
+
+        <label for="date">Date / Fecha</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time / Hora</label>
+        <input type="time" id="time" name="time" required>
+
+        <!-- Hidden fields for Formspree -->
+        <input type="hidden" name="_subject" value="New Shuttle Booking Request">
+        <input type="hidden" name="_next" value="https://sarchitravelexpress.com/thanks.html">
+
+        <!-- Botón WhatsApp -->
+        <button type="button" class="btn-submit" id="btnWhatsApp" onclick="enviarWhatsApp()">📲 Send to WhatsApp / Enviar por WhatsApp</button>
+
+        <p class="trust-message">✅ Secure Booking – We reply within 15 minutes via WhatsApp</p>
+    </form>
+
+    <!-- Mensaje de confirmación -->
+    <p id="form-success" style="display:none; color:green; font-weight:bold; margin-top:20px; text-align:center;">
+        ✅ Tu reserva fue enviada con éxito. Te contactaremos pronto.
+    </p>
+</section>
 
                     <!-- Campo message obligatorio para Formspree -->
                 
                     <!-- Mensaje de confirmación oculto -->
             <input type="hidden" name="_subject" value="New Shuttle Booking Request">
             <input type="hidden" name="_next" value="https://sarchitravelexpress.com/thanks.html">
-                    <!-- Botones -->
-            <button type="button" class="btn-submit" id="btnWhatsApp" onclick="enviarWhatsApp()">📲 Send to WhatsApp / Enviar por WhatsApp</button>
-            <p class="trust-message">✅ Secure Booking – We reply within 15 minutes via WhatsApp</p>
-                </form>
-            </section>
-            <!-- Contact -->
+                       <!-- Contact -->
             <section id="contact">
                 <h2>Contact Us</h2>
                 <p>WhatsApp: +506 60530702</p>
