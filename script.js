@@ -3,15 +3,13 @@
 // ==========================
 
 document.addEventListener("DOMContentLoaded", () => {
-  // --- Menú hamburguesa ---
   const menuToggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector("nav");
+  const menu = document.querySelector("nav ul");
 
-  if (menuToggle && nav) {
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-  }
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+});
 
   // --- Validar fecha (no permitir pasadas) ---
   const dateInput = document.getElementById("date");
@@ -70,14 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
 
 // ==========================
 // Función para enviar por WhatsApp
 // ==========================
 function enviarWhatsApp() {
   const name = document.getElementById("name")?.value || "";
-  const contact = document.getElementById("email")?.value || "";
+  const contact = document.getElementById("contact")?.value || "";
   const pickup = document.getElementById("pickup")?.value || "";
   const destination = document.getElementById("destination")?.value || "";
   const otherDestination = document.getElementById("other-destination")?.value || "";
