@@ -85,7 +85,7 @@ function enviarWhatsApp() {
   const time = document.getElementById("time")?.value || "";
 
   const finalDestination = destination === "Other" ? otherDestination : destination;
-  const companyNumber = "50660530702"; // Número de la empresa
+  const companyNumber = "50662787703"; // Número de la empresa
 
   const message = `Shuttle Booking Request:\n
 👤 Name: ${name}\n
