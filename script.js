@@ -1,5 +1,5 @@
 // ==========================
-// Script principal
+// Script principal para Sarchí Travel Express
 // ==========================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Validar fecha (no permitir pasadas) ---
+  // --- Validar fecha (no permitir fechas pasadas) ---
   const dateInput = document.getElementById("date");
   if (dateInput) {
     const today = new Date().toISOString().split("T")[0];
@@ -37,43 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-
-  // --- Confirmación en pantalla al enviar ---
-  const form = document.getElementById("bookingForm");
-  const successMessage = document.getElementById("form-success");
-
-  if (form && successMessage) {
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      try {
-        const formData = new FormData(form);
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: formData,
-          headers: { "Accept": "application/json" }
-        });
-
-        if (response.ok) {
-          successMessage.style.display = "block";
-          form.reset();
-          if (otherContainer && otherInput) {
-            otherContainer.style.display = "none";
-            otherInput.required = false;
-          }
-        } else {
-          alert("❌ Hubo un problema al enviar tu reserva. Intenta nuevamente.");
-        }
-      } catch (error) {
-        console.error("Error al enviar el formulario:", error);
-        alert("⚠️ Error de conexión. Intenta más tarde.");
-      }
-    });
-  }
 });
 
 // ==========================
-// Función para enviar por WhatsApp
+// Función para enviar por WhatsApp (Opcional)
 // ==========================
 function enviarWhatsApp() {
   const name = document.getElementById("name")?.value || "";
@@ -85,15 +52,9 @@ function enviarWhatsApp() {
   const time = document.getElementById("time")?.value || "";
 
   const finalDestination = destination === "Other" ? otherDestination : destination;
-  const companyNumber = "50662787703"; // Número de la empresa
+  const companyNumber = "50662787703"; // Número oficial
 
-  const message = `Shuttle Booking Request:\n
-👤 Name: ${name}\n
-📧 Contact: ${contact}\n
-📍 Pickup: ${pickup}\n
-🎯 Destination: ${finalDestination}\n
-📅 Date: ${date}\n
-⏰ Time: ${time}`;
+  const message = `Shuttle Booking Request:\n\n👤 Name: ${name}\n📧 Contact: ${contact}\n📍 Pickup: ${pickup}\n🎯 Destination: ${finalDestination}\n📅 Date: ${date}\n⏰ Time: ${time}`;
 
   const url = `https://wa.me/${companyNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
