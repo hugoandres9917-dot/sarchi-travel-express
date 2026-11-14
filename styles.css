@@ -9,7 +9,6 @@
   --color-text: #333333;
   --color-light: #f9f9f9;
   --color-white: #ffffff;
-  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 1. Reset y Estilos Globales */
@@ -21,7 +20,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--color-text);
   background-color: var(--color-white);
 }
@@ -30,7 +29,7 @@ body {
   line-height: 1.6;
 }
 
-/* 2. Header Minimalista */
+/* 2. Header */
 header {
   background-color: var(--color-white);
   border-bottom: 1px solid #eaeaea;
@@ -44,7 +43,7 @@ header {
 }
 
 .logo {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 1.1rem;
   color: var(--color-primary);
 }
@@ -52,15 +51,13 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: var(--color-text);
   font-weight: 500;
-  font-size: 0.95rem;
-  transition: var(--transition-smooth);
 }
 
 nav a:hover {
@@ -71,9 +68,9 @@ nav a:hover {
   font-size: 0.9rem;
 }
 
-/* 3. Hero Section Moderno */
+/* 3. Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.jpg') center/cover no-repeat;
   color: var(--color-white);
   text-align: center;
   padding: 100px 20px;
@@ -85,75 +82,60 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  max-width: 900px;
-  margin-bottom: 20px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-size: 2.5rem;
+  max-width: 800px;
+  margin-bottom: 15px;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  opacity: 0.95;
+  font-size: 1.1rem;
+  max-width: 600px;
 }
 
 /* 4. Secciones Generales */
 section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 section h2 {
   text-align: center;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 40px;
-  font-weight: 700;
+  margin-bottom: 30px;
 }
 
-/* 5. Tarjetas de Servicios y Destinos (Efecto Elevación Minimalista) */
+/* 5. Tarjetas de Servicios y Destinos */
 .cards, .destinations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .card, .destination {
   background: var(--color-white);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   border: 1px solid #eaeaea;
-  transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
 }
 
-.card:hover, .destination:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 105, 92, 0.12);
-}
-
 .card img, .destination img {
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.card:hover img, .destination:hover img {
-  transform: scale(1.04);
 }
 
 .card h3, .destination h3 {
-  font-size: 1.25rem;
-  padding: 20px 20px 10px;
+  font-size: 1.2rem;
+  padding: 15px 15px 5px;
   color: var(--color-primary-dark);
 }
 
 .card p, .destination p {
-  padding: 0 20px 20px;
+  padding: 0 15px 15px;
   color: #666;
   font-size: 0.95rem;
   flex-grow: 1;
@@ -165,64 +147,52 @@ section h2 {
   background-color: var(--color-primary);
   color: var(--color-white);
   text-align: center;
-  padding: 12px 20px;
-  margin: 0 20px 20px;
-  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 0 15px 15px;
+  border-radius: 5px;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
   border: none;
   cursor: pointer;
-  transition: var(--transition-smooth);
 }
 
 .destination .btn:hover, .btn-submit:hover {
   background-color: var(--color-primary-dark);
 }
 
-/* 6. Tabla de Destinos Minimalista */
+/* 6. Tabla de Destinos */
 .destinations-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 40px;
+  margin-top: 30px;
   background: var(--color-white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .destinations-table th, .destinations-table td {
-  padding: 15px 20px;
+  padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 .destinations-table th {
   background-color: var(--color-primary);
   color: var(--color-white);
-  font-weight: 600;
-}
-
-.destinations-table tr:hover {
-  background-color: #f4fbfa;
 }
 
 /* 7. Sección About y Gallery */
 .about {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   background-color: var(--color-light);
-  border-radius: 16px;
-  padding: 60px;
+  border-radius: 12px;
+  padding: 40px;
 }
 
 .about-text {
   flex: 1;
-}
-
-.about-text p {
-  margin-bottom: 12px;
-  font-size: 1.05rem;
 }
 
 .about-image {
@@ -231,8 +201,7 @@ section h2 {
 
 .about-image img {
   width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 8px;
 }
 
 .gallery {
@@ -245,26 +214,20 @@ section h2 {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  transition: var(--transition-smooth);
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-  filter: brightness(1.05);
+  border-radius: 6px;
 }
 
 /* 8. Sección de Reseñas */
 .comments {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .comment {
   background: var(--color-light);
-  padding: 25px;
-  border-radius: 10px;
+  padding: 20px;
+  border-radius: 8px;
   border-left: 4px solid var(--color-primary);
 }
 
@@ -274,57 +237,47 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* 9. Formulario de Reservas Minimalista */
+/* 9. Formulario de Reservas */
 .booking-form {
   background: var(--color-light);
-  padding: 40px;
-  border-radius: 16px;
-  max-width: 700px;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
   margin: 0 auto;
   border: 1px solid #eaeaea;
 }
 
 .booking-form label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 .booking-form input, 
 .booking-form select, 
 .booking-form textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 5px;
   font-size: 1rem;
   background: var(--color-white);
-  transition: var(--transition-smooth);
-}
-
-.booking-form input:focus, 
-.booking-form select:focus, 
-.booking-form textarea:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(0, 105, 92, 0.15);
 }
 
 .trust-message {
   text-align: center;
-  margin-top: 15px;
-  font-size: 0.9rem;
-  color: #555;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #666;
 }
 
 /* 10. Footer */
 footer {
   text-align: center;
-  padding: 30px;
-  background-color: #1a1a1a;
+  padding: 20px;
+  background-color: #222;
   color: #aaa;
   font-size: 0.9rem;
-  margin-top: 60px;
 }
