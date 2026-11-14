@@ -1,48 +1,43 @@
-
-#thanks.html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Confirmed / Reserva Confirmada</title>
+    <title>Booking Confirmed / Sarchí Travel Express</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #fdfbf7;
-            color: #333;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1 { color: #2c5e3b; }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #2c5e3b;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-        .btn:hover { background-color: #1e3f26; }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>¡Reserva Recibida con Éxito! / Booking Received!</h1>
-        <p>Gracias por confiar en <strong>Sarchí Travel Express</strong>. Hemos recibido los detalles de tu viaje y te contactaremos en menos de 15 minutos para coordinar tu traslado.</p>
-        <p>Pura Vida! 🇨🇷</p>
-        <a href="https://sarchitravelexpress.com" class="btn">Volver al Inicio / Back to Home</a>
-    </div>
+    <header>
+        <div class="logo">Sarchí Travel Express / Private Shuttle Service</div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html#Home">Home</a></li>
+                <li><a href="index.html#Services">Services</a></li>
+                <li><a href="index.html#Destinations">Destinations</a></li>
+                <li><a href="index.html#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 60px 20px; text-align: center; max-width: 800px; margin: 0 auto;">
+        <div style="background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h1 style="color: #25d366; margin-bottom: 20px;">🎉 ¡Reservación Recibida con Éxito!</h1>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #444; margin-bottom: 20px;">
+                Muchas gracias por confiar en <strong>Sarchí Travel Express</strong>. Hemos recibido los detalles de tu viaje correctamente en nuestro sistema y nos pondremos en contacto contigo en los próximos 15 minutos para confirmar tu espacio.
+            </p>
+            <p style="font-size: 1rem; color: #666; margin-bottom: 30px;">
+                *Nota importante: Si deseas una confirmación inmediata o tienes alguna duda urgente sobre tu traslado o tour, puedes escribirnos directamente por WhatsApp haciendo clic en el botón de abajo.*
+            </p>
+            
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://wa.me/50662787703?text=Hola,%20acabo%20de%20enviar%20mi%20solicitud%20de%20reserva%20desde%20la%20web%20y%20me%20gustaría%20confirmarla." class="btn" style="background-color: #25d366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;" target="_blank">📲 Escribir por WhatsApp</a>
+                <a href="index.html" class="btn" style="background-color: #333; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">🏠 Volver al Inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Sarchí Travel Express. All rights reserved.</p>
+    </footer>
 </body>
 </html>
