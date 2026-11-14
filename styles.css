@@ -1,11 +1,12 @@
-/* Reset básico */
+/* ==========================================
+   1. Reset básico y Variables
+   ================================---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables de color */
 :root {
   --color-primary: #00695c;
   --color-primary-dark: #004d40;
@@ -15,7 +16,6 @@
   --color-bg: #f9f9f9;
 }
 
-/* Tipografía y colores generales */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
@@ -23,7 +23,9 @@ body {
   background-color: var(--color-bg);
 }
 
-/* Header */
+/* ==========================================
+   2. Header, Logo y Navegación
+   ================================---------- */
 header {
   position: sticky;
   top: 0;
@@ -31,22 +33,20 @@ header {
   background: #fef6e4;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  font-family: 'Segoe UI', Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
+  flex-wrap: wrap;
 }
 
-/* Logo */
 header .logo {
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-red);
-  padding: 15px 20px;
+  padding: 5px 10px;
 }
 
-/* Navegación */
 nav ul {
   display: flex;
   gap: 15px;
@@ -57,7 +57,7 @@ nav ul li a {
   text-decoration: none;
   color: var(--color-blue);
   font-weight: 600;
-  padding: 10px 15px;
+  padding: 8px 12px;
   transition: all 0.3s ease;
   border-radius: 5px;
 }
@@ -67,7 +67,6 @@ nav ul li a:hover {
   color: #fff;
 }
 
-/* Botón hamburguesa */
 .menu-toggle {
   font-size: 24px;
   background: none;
@@ -76,18 +75,28 @@ nav ul li a:hover {
   display: none;
 }
 
-/* Responsive navegación */
+/* Selector de idioma limpio */
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Responsive navegación para móviles */
 @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
     background: #fff;
     position: absolute;
-    top: 60px;
+    top: 65px;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-top: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
   nav ul.active {
@@ -109,7 +118,9 @@ nav ul li a:hover {
   }
 }
 
-/* Hero */
+/* ==========================================
+   3. Hero Section
+   ================================---------- */
 .hero {
   position: relative;
   background: url('LOGO.jpeg') center/cover no-repeat;
@@ -139,7 +150,9 @@ nav ul li a:hover {
   font-size: 1.2rem;
 }
 
-/* Secciones generales */
+/* ==========================================
+   4. Secciones Generales y Cards
+   ================================---------- */
 section {
   padding: 50px 20px;
   max-width: 1100px;
@@ -152,7 +165,6 @@ h2 {
   color: var(--color-primary);
 }
 
-/* Cards */
 .cards {
   display: flex;
   gap: 20px;
@@ -175,7 +187,9 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Destinations */
+/* ==========================================
+   5. Destinations y Tabla
+   ================================---------- */
 .destinations {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -216,13 +230,15 @@ h2 {
   background: var(--color-primary-dark);
 }
 
-/* Tabla de destinos */
 .destinations-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
   font-size: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .destinations-table th,
@@ -250,21 +266,26 @@ h2 {
   color: var(--color-primary-dark);
 }
 
-/* About */
+/* ==========================================
+   6. About Section
+   ================================---------- */
 .about {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .about-text {
   flex: 1;
+  min-width: 280px;
 }
 
 .about-image {
   flex: 1;
   text-align: right;
+  min-width: 280px;
 }
 
 .about-image img {
@@ -275,7 +296,9 @@ h2 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
+/* ==========================================
+   7. Gallery & Comments
+   ================================---------- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -296,7 +319,6 @@ h2 {
   transform: scale(1.05);
 }
 
-/* Customer Comments */
 .comments {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -324,7 +346,9 @@ h2 {
   line-height: 1.4;
 }
 
-/* Booking Form */
+/* ==========================================
+   8. Booking Form
+   ================================---------- */
 .booking-form {
   background: #fff;
   padding: 30px;
@@ -346,6 +370,40 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
+}
+
+#message {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+}
+
+#message:focus {
+  border-color: #00695c;
+  box-shadow: 0 0 6px rgba(0,105,92,0.3);
+  outline: none;
+}
+
+#other-destination-container {
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+#other-destination {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
 .btn-submit {
@@ -374,43 +432,25 @@ h2 {
   text-align: center;
 }
 
-
-
-
-/* Contact & Footer */
-#contact {
-  background: #e0f2f1;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-}
 #form-success {
   font-size: 1rem;
   background: #e0f7e9;
   border: 1px solid #2e7d32;
   padding: 20px;
   border-radius: 10px;
-  display: none; /* oculto por defecto */
+  display: none;
   margin-top: 20px;
   text-align: center;
 }
-/* Campo de notas/mensaje */
-#message {
-  width: 100%;              /* ocupa todo el ancho */
-  min-height: 120px;        /* más alto que un input normal */
-  padding: 12px;            /* espacio interno cómodo */
-  font-size: 1rem;          /* texto legible */
-  border: 1px solid #ccc;   /* borde suave */
-  border-radius: 8px;       /* esquinas redondeadas */
-  resize: vertical;         /* el usuario puede agrandar hacia abajo */
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
 
-#message:focus {
-  border-color: #00695c;    /* verde consistente con tu branding */
-  box-shadow: 0 0 6px rgba(0,105,92,0.3);
-  outline: none;
+/* ==========================================
+   9. Contact & Footer
+   ================================---------- */
+#Contact {
+  background: #e0f2f1;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 footer {
@@ -419,90 +459,4 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 30px;
-}
-#other-destination-container {
-  padding: 10px;
-  background: #f9f9f9;
-  border-radius: 6px;
-}
-#other-destination {
-  width: 100%;
-  padding: 8px;
-  margin-top: 6px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-/* Estilos generales */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
-
-/* Botón hamburguesa */
-.menu-toggle {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Menú normal en escritorio */
-nav ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-}
-
-/* Responsive: en móviles */
-@media (max-width: 768px) {
-  nav ul {
-    display: none; /* oculto por defecto */
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 60px; /* debajo del header */
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-  }
-
-  nav ul.active {
-    display: flex; /* se muestra cuando se activa */
-  }
-}
-nav {
-  display: none; /* oculto por defecto */
-}
-
-nav.active {
-  display: block; /* se muestra cuando tiene la clase active */
-}
-
-/* Opcional: estilos para móviles */
-@media (min-width: 768px) {
-  nav {
-    display: block; /* en pantallas grandes siempre visible */
-  }
-  .menu-toggle {
-    display: none; /* ocultar botón hamburguesa en escritorio */
-  }
-}
-/* Estilo limpio para el selector de idiomas */
-.language-selector {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* Opcional: si quieres que aparezca flotando o bien ordenado junto al menú en pantallas grandes */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
