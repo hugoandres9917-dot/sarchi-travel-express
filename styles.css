@@ -115,7 +115,7 @@ nav ul li a:hover {
   }
 }
 
-/* Hero con LOGO.jpeg */
+/* Hero */
 .hero {
   position: relative;
   background: url('LOGO.jpeg') center/cover no-repeat;
@@ -327,7 +327,7 @@ h2 {
 .comment p {
   font-size: 0.95rem;
   color: #444;
-  line-height: 1.4;
+  line-align: 1.4;
 }
 
 /* Booking Form */
