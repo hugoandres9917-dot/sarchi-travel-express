@@ -1,5 +1,3 @@
-<!-- Index.html -->
-    
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -38,12 +36,12 @@
     <body>
         <!-- Header -->
         <header>
-            <div class="logo">Sarchí Travel Express / Private Shuttle Service</div>
-            <!-- Botón hamburguesa -->
+            
+            <!-- Selector de Idioma -->
             <div class="language-selector" style="text-align: right; padding: 10px 20px; font-size: 14px;">
-                <a href="index.html" style="text-decoration: none; color: #333;">🇬🇧 English</a> 
+                <a href="index.html" style="text-decoration: none; color: #007bff; font-weight: bold;">🇬🇧 English</a> 
                 <span style="color: #ccc; margin: 0 5px;">|</span> 
-                <span style="color: #007bff; font-weight: bold;">🇪🇸 Español</span>
+                <a href="index-es.html" style="text-decoration: none; color: #333;">🇪🇸 Español</a>
             </div>
             <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
             <nav aria-label="Main navigation">
@@ -56,12 +54,13 @@
                     <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
+            <div class="logo">Sarchí Travel Express / Private Shuttle Service</div>
         </header>
 
         <!-- Hero -->
         <section id="Home" class="hero">
-            <h1></h1>
-            <p></p>
+            <h1>Private Shuttle & Tours in Costa Rica</h1>
+            <p>Reliable airport transfers from SJO & LIR directly to your hotel or destination with bilingual drivers.</p>
         </section>
 
         <!-- Services -->
@@ -267,7 +266,7 @@
                     <option value="Monteverde">Monteverde $180</option>
                     <option value="Manuel Antonio">Manuel Antonio $180</option>
                     <option value="Guanacaste Beaches">Guanacaste Beaches $220</option>
-                    <option value="Caribbean Coast $220">Caribbean Coast  $220"</option>
+                    <option value="Caribbean Coast $220">Caribbean Coast $220</option>
                     <option value="Poás Volcano">Poás Volcano $120</option>
                     <option value="San Jose International Airport">San Jose International Airport - GET A QUOTE!</option>
                     <option value="Liberia International Airport">Liberia International Airport $220</option>
@@ -289,7 +288,6 @@
                 <label for="time">Time / Hora</label>
                 <input type="time" id="time" name="time" required>
 
-                <!-- Campos ocultos esenciales para Formspree -->
                 <!-- Campos ocultos esenciales para Formspree -->
                 <input type="hidden" name="_subject" value="New Shuttle Booking Request - Sarchí Travel Express">
                 <input type="hidden" name="_next" value="https://sarchitravelexpress.com/thanks.html">
@@ -338,7 +336,7 @@
             // Enviar formulario a Formspree mediante AJAX y redirigir a thanks.html
             const form = document.getElementById("bookingForm");
             form.addEventListener("submit", function(e) {
-                e.preventDefault(); // Evita que abra la página de Formspree por defecto
+                e.preventDefault();
                 
                 const formData = new FormData(form);
                 
@@ -350,7 +348,6 @@
                     }
                 }).then(response => {
                     if (response.ok) {
-                        // Si se envió bien a Formspree, redirige a tu página de agradecimiento
                         window.location.href = "thanks.html";
                     } else {
                         alert("Hubo un problema al enviar tu solicitud. Por favor intenta de nuevo o escríbenos por WhatsApp.");
@@ -378,3 +375,5 @@
                 window.open(url, "_blank");
             }
         </script>
+    </body>
+</html>
