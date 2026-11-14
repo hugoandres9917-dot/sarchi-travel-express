@@ -1,3 +1,7 @@
+/* ==========================================
+   Sarchí Travel Express - Estilos Principales
+   ========================================== */
+
 /* Reset básico */
 * {
   margin: 0;
@@ -82,7 +86,7 @@ nav ul li a:hover {
 /* Responsive navegación para móviles */
 @media (max-width: 768px) {
   nav {
-    display: none; /* Oculto por defecto en móvil */
+    display: none;
     position: absolute;
     top: 60px;
     left: 0;
@@ -94,7 +98,7 @@ nav ul li a:hover {
   }
 
   nav.active {
-    display: block; /* Se muestra al activar el menú hamburguesa */
+    display: block;
   }
 
   nav ul {
@@ -111,10 +115,10 @@ nav ul li a:hover {
   }
 }
 
-/* Hero */
+/* Hero con LOGO.jpeg */
 .hero {
   position: relative;
-  background: url('../static/Logo.png') center/cover no-repeat;
+  background: url('LOGO.jpeg') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 200px 20px;
@@ -323,7 +327,7 @@ h2 {
 .comment p {
   font-size: 0.95rem;
   color: #444;
-  line-align: 1.4;
+  line-height: 1.4;
 }
 
 /* Booking Form */
@@ -438,7 +442,7 @@ footer {
 /* Contenedor responsivo para videos */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* Proporción 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
