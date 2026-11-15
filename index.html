@@ -2,10 +2,25 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Private transfers from San José Airport to hotels and tourist destinations in Costa Rica. Book your shuttle online.">
-        <title>Costa Rica Airport Shuttle / Sarchí Travel Express</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO Local y Metadatos -->
+        <title>Transporte Privado Aeropuerto SJO y LIR | Sarchí Travel Express</title>
+        <meta name="description" content="Servicio de transporte privado y traslados seguros desde los aeropuertos SJO y LIR hacia el Volcán Arenal, Monteverde, Manuel Antonio y toda Costa Rica. ¡Conductores bilingües y reserva fácil!">
+        <meta name="keywords" content="transporte privado aeropuerto SJO, shuttle a Volcán Arenal, traslado privado Costa Rica, transporte Sarchí, taxi aeropuerto San José LIR, tours privados Costa Rica">
+        <meta name="author" content="Sarchí Travel Express">
+
+        <!-- Open Graph / Redes Sociales -->
+        <meta property="og:title" content="Transporte Privado Aeropuerto SJO y LIR | Sarchí Travel Express">
+        <meta property="og:description" content="Viaja sin estrés desde el aeropuerto a tu hotel en Costa Rica con transporte privado y conductores bilingües.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://sarchitravelexpress.com">
+        <meta property="og:locale" content="es_CR">
+        <meta property="og:locale:alternate" content="en_US">
+
         <link rel="stylesheet" href="styles.css">
         <script src="js/script.js" defer></script>
+        
         <!-- SEO Structured Data -->
         <script type="application/ld+json">
             {
@@ -15,7 +30,7 @@
                 "url": "https://sarchitravelexpress.com",
                 "logo": "https://sarchitravelexpress.com/logo.png",
                 "image": "https://sarchitravelexpress.com/hero.jpg",
-                "description": "Private shuttle and tour company in Costa Rica offering airport transfers, exclusive tours, and bilingual drivers.",
+                "description": "Empresa de transporte privado y tours en Costa Rica que ofrece traslados al aeropuerto, tours exclusivos y conductores bilingües.",
                 "telephone": "+50662787703",
                 "email": "hugo.andres99@hotmail.com",
                 "address": {
@@ -36,292 +51,344 @@
     <body>
         <!-- Header -->
         <header>
-            
-            <!-- Selector de Idioma -->
-            <div class="language-selector" style="text-align: right; padding: 10px 20px; font-size: 14px;">
-                <a href="index.html" style="text-decoration: none; color: #007bff; font-weight: bold;">🇬🇧 English</a> 
-                <span style="color: #ccc; margin: 0 5px;">|</span> 
-                <a href="index-es.html" style="text-decoration: none; color: #333;">🇪🇸 Español</a>
+            <div class="top-bar">
+                <div class="logo">Sarchí Travel Express</div>
+                <!-- Selector de Idioma -->
+                <div class="language-selector">
+                    <a href="index.html" class="lang-link">🇬🇧 English</a> 
+                    <span class="lang-divider">|</span> 
+                    <a href="index-es.html" class="lang-link active">🇪🇸 Español</a>
+                </div>
+                <!-- Botón Menú Hamburguesa para Móvil -->
+                <button class="menu-toggle" aria-label="Abrir menú" onclick="toggleMenu()">&#9776;</button>
             </div>
-            <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-            <nav aria-label="Main navigation">
+            <nav id="main-nav" aria-label="Navegación principal">
                 <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Services">Services</a></li>
-                    <li><a href="#Destinations">Destinations</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Booking">Booking</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="#Home" onclick="closeMenu()">Inicio</a></li>
+                    <li><a href="#Services" onclick="closeMenu()">Servicios</a></li>
+                    <li><a href="#Destinations" onclick="closeMenu()">Destinos</a></li>
+                    <li><a href="#About" onclick="closeMenu()">Nosotros</a></li>
+                    <li><a href="#Booking" onclick="closeMenu()">Reservas</a></li>
+                    <li><a href="#Contact" onclick="closeMenu()">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="logo">Sarchí Travel Express / Private Shuttle Service</div>
         </header>
 
         <!-- Hero -->
         <section id="Home" class="hero">
-            <h1>Private Shuttle & Tours in Costa Rica</h1>
-            <p>Reliable airport transfers from SJO & LIR directly to your hotel or destination with bilingual drivers.</p>
+            <h1>Servicio de Transporte Privado y Traslados en Costa Rica</h1>
+            <p>Traslados confiables desde los aeropuertos SJO y LIR directamente a tu hotel o destino con conductores bilingües.</p>
         </section>
 
         <!-- Services -->
-        <section id="Services">
-            <h2>Our Services</h2>
+        <section id="Services" class="container">
+            <h2>Nuestros Servicios</h2>
             <div class="cards">
                 <div class="card">
-                    <img src="airportwaiting.png" alt="Airport transfer service in Costa Rica"/>
-                    <h3>Costa Rica Airport Shuttle - Private Transfers from SJO & LIR</h3>
-                    <p>Book reliable airport transfers in Costa Rica. Private shuttle service from 
-                        San José (SJO) and Liberia (LIR) airports to hotels and tourist destinations. Safe, comfortable, 
-                        and bilingual drivers</p>
+                    <img src="airportwaiting.png" alt="Servicio de traslado al aeropuerto en Costa Rica"/>
+                    <h3>Transporte Privado al Aeropuerto - SJO y LIR</h3>
+                    <p>Reserva traslados confiables en Costa Rica. Servicio de transporte privado desde los aeropuertos de San José (SJO) y Liberia (LIR) hacia hoteles y destinos turísticos. Conductores seguros, cómodos y bilingües.</p>
                 </div>
                 <div class="card">
-                    <img src="privateshuttle.jpeg" alt="Private shuttle service in Costa Rica"/>
-                    <h3>Private Shuttles</h3>
-                    <p>Any hotel in Costa Rica / comfortable vehicles with bilingual drivers.</p>
-                    <p>Door to door service</p>
+                    <img src="privateshuttle.jpeg" alt="Servicio de transporte privado en Costa Rica"/>
+                    <h3>Transportes Privados</h3>
+                    <p>A cualquier hotel en Costa Rica / Vehículos cómodos con conductores bilingües.</p>
+                    <p><strong>Servicio puerta a puerta</strong></p>
                 </div>
                 <div class="card">
-                    <img src="kayaktour.jpeg" alt="Exclusive kayak tour in Costa Rica"/>
-                    <h3>Exclusive Tours</h3>
-                    <p>Custom itineraries to Manuel Antonio Park, Arenal volcano, Guanacaste beaches, Monteverde cloud forest, Caribbean coast & more.</p>
+                    <img src="kayaktour.jpeg" alt="Tour exclusivo de kayak en Costa Rica"/>
+                    <h3>Tours Exclusivos</h3>
+                    <p>Itinerarios personalizados al Parque Nacional Manuel Antonio, Volcán Arenal, playas de Guanacaste, Bosque Nuboso Monteverde, Costa Caribeña y más.</p>
                 </div>
             </div>
         </section>
 
         <!-- Destinations -->
-        <section id="Destinations">
-            <h2>Traveling to Costa Rica should be stress-free from the moment you land. Our private airport transfer service ensures a smooth, safe, and comfortable ride from San José International Airport (SJO) or Liberia International Airport (LIR) directly to your hotel or destination.</h2>
-            <ul>
-                <li>Why Choose Us.</li>
-                <li>- Private Transfers Only / No waiting, no shared rides.</li>
-                <li>- Bilingual Drivers / English & Spanish speaking.</li>
-                <li>- Door-to-Door Service / From airport to hotel or tourist destination.</li>
-                <li>- Easy Online Booking / Pay securely with PayPal or credit card.</li>
-                <li>- Trusted by Travelers / Excellent reviews from international guests.</li>
-            </ul>
+        <section id="Destinations" class="container">
+            <div class="intro-destinos">
+                <h2>Viajar por Costa Rica debe ser una experiencia libre de estrés desde el momento en que aterrices. Nuestro servicio privado te garantiza un viaje cómodo y directo.</h2>
+                <ul class="features-list">
+                    <li>✓ <strong>Solo traslados privados:</strong> Sin esperas ni viajes compartidos.</li>
+                    <li>✓ <strong>Conductores bilingües:</strong> Español e inglés.</li>
+                    <li>✓ <strong>Servicio puerta a puerta:</strong> Desde el aeropuerto hasta tu hotel o destino.</li>
+                    <li>✓ <strong>Reserva fácil en línea:</strong> Confirmación rápida y sin complicaciones.</li>
+                    <li>✓ <strong>Respaldado por viajeros:</strong> Excelentes reseñas de nuestros huéspedes.</li>
+                </ul>
+            </div>
 
             <section id="destinations-grid">
-                <h2>Costa Rica is full of breathtaking destinations, and we make it easy for you to explore them with private tours and transfers.</h2>
+                <h2>Elige tu próximo destino en Costa Rica</h2>
                 <div class="destinations">
-                    <div class="destination">
-                        <img src="arenalvolcan.jpeg" alt="Arenal Volcano" loading="lazy">
-                        <h3>San José → Arenal Volcano $180</h3>
-                        <p>🌋 Arenal Volcano & Hot Springs: Enjoy a scenic drive to La Fortuna, where you can visit the Arenal Volcano, relax in natural hot springs, and explore waterfalls.</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Arenal Volcano">Book Now</a>
+                    <div class="destination-card">
+                        <img src="arenalvolcan.jpeg" alt="Volcán Arenal" loading="lazy">
+                        <div class="dest-content">
+                            <h3>San José → Volcán Arenal $180</h3>
+                            <p>🌋 Volcán Arenal y Aguas Termales: Disfruta de un viaje panorámico hacia La Fortuna, donde podrás visitar el Volcán Arenal, relajarte en aguas termales naturales y explorar cascadas.</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Volcán Arenal">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="GUANA.jpeg" alt="Guanacaste Beaches" loading="lazy">
-                        <h3>Guanacaste Beaches $220</h3>
-                        <p>Surfing, Resorts, Diving, Fishing</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Guanacaste beaches">Book Now</a>
+                    <div class="destination-card">
+                        <img src="GUANA.jpeg" alt="Playas de Guanacaste" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Playas de Guanacaste $220</h3>
+                            <p>Surf, Resorts, Buceo, Pesca</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Playas de Guanacaste">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="monteverde.jpeg" alt="Monteverde Cloud Forest" loading="lazy">
-                        <h3>Monteverde Cloud Forest $180</h3>
-                        <p>🌲 Monteverde Cloud Forest: Experience hanging bridges, zip lines, and the unique biodiversity of Costa Rica’s famous cloud forest.</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Monteverde Cloud Forest">Book Now</a>
+                    <div class="destination-card">
+                        <img src="monteverde.jpeg" alt="Bosque Nuboso Monteverde" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Bosque Nuboso Monteverde $180</h3>
+                            <p>🌲 Bosque Nuboso Monteverde: Experimenta puentes colgantes, tirolesas y la biodiversidad única del famoso bosque nuboso de Costa Rica.</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Monteverde">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="MANUELANTONIO.jpeg" alt="Manuel Antonio National Park" loading="lazy">
-                        <h3>Manuel Antonio National Park $180</h3>
-                        <p>🏖️ Manuel Antonio National Park: Discover white-sand beaches and abundant wildlife. Our private transfer takes you directly to the park entrance or your hotel nearby.</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Manuel Antonio National Park">Book Now</a>
+                    <div class="destination-card">
+                        <img src="MANUELANTONIO.jpeg" alt="Parque Nacional Manuel Antonio" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Parque Nacional Manuel Antonio $180</h3>
+                            <p>🏖️ Parque Nacional Manuel Antonio: Descubre playas de arena blanca y abundante vida silvestre. Nuestro traslado te lleva directo a la entrada o a tu hotel cercano.</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Manuel Antonio">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="caribe.jpeg" alt="Caribbean Coast" loading="lazy">
-                        <h3>Caribbean Coast Tour $220</h3>
-                        <p>Tortuguero, Cahuita, Puerto Viejo, Manzanillo</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Caribbean Coast">Book Now</a>
+                    <div class="destination-card">
+                        <img src="caribe.jpeg" alt="Costa Caribeña" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Tour Costa Caribeña $220</h3>
+                            <p>Tortuguero, Cahuita, Puerto Viejo, Manzanillo</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Costa Caribeña">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="lapaz.jpg" alt="La Paz Waterfalls and Gardens" loading="lazy">
-                        <h3>La Paz Waterfalls and Gardens Shuttle $100/pp</h3>
-                        <p>Exotic Animals, Waterfalls, Rainforest</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to La Paz Waterfalls and Gardens">Book Now</a>
+                    <div class="destination-card">
+                        <img src="lapaz.jpg" alt="Cataratas y Jardines de La Paz" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Cataratas y Jardines de La Paz $100/pp</h3>
+                            <p>Animales exóticos, Cascadas, Selva tropical</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Cataratas de La Paz">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="cafetour.jpg" alt="Coffee and Chocolate Tour" loading="lazy">
-                        <h3>Coffee / Chocolate Tour $95</h3>
-                        <p>Grain process, real chocolate process</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Coffee and Chocolate Tour">Book Now</a>
+                    <div class="destination-card">
+                        <img src="cafetour.jpg" alt="Tour de Café y Chocolate" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Tour de Café / Chocolate $95</h3>
+                            <p>Proceso del grano, elaboración real de chocolate</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar Tour de Café y Chocolate">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="POAS.jpeg" alt="Poás Volcano National Park" loading="lazy">
-                        <h3>Poás Volcano National Park $120</h3>
-                        <p>Nature, Cloud Forest, Hiking</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Poás Volcano National Park">Book Now</a>
+                    <div class="destination-card">
+                        <img src="POAS.jpeg" alt="Parque Nacional Volcán Poás" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Parque Nacional Volcán Poás $120</h3>
+                            <p>Naturaleza, Bosque Nuboso, Senderismo</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Volcán Poás">Reservar Ahora</a>
+                        </div>
                     </div>
-                    <div class="destination">
-                        <img src="rioceleste.jpeg" alt="Tenorio Volcano National Park" loading="lazy">
-                        <h3>Tenorio Volcano National Park $220</h3>
-                        <p>Cloud Forest, Tubing, Hiking, Horse Riding</p>
-                        <a href="#Booking" class="btn" aria-label="Book shuttle to Tenorio Volcano National Park">Book Now</a>
+                    <div class="destination-card">
+                        <img src="rioceleste.jpeg" alt="Parque Nacional Volcán Tenorio" loading="lazy">
+                        <div class="dest-content">
+                            <h3>Parque Nacional Volcán Tenorio $220</h3>
+                            <p>Bosque nuboso, Tubing, Senderismo, Cabalgatas</p>
+                            <a href="#Booking" class="btn" aria-label="Reservar transporte a Volcán Tenorio">Reservar Ahora</a>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="destinations-table">
-                <h2>Destinations & Prices</h2>
+            <section id="destinations-table" class="table-container">
+                <h2>Destinos y Precios</h2>
                 <table class="destinations-table">
                     <thead>
                         <tr>
-                            <th>Destination</th>
-                            <th>Price (USD)</th>
-                            <th>Main Activities</th>
+                            <th>Destino</th>
+                            <th>Precio (USD)</th>
+                            <th>Actividades Principales</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>Arenal Volcano</td><td>$180</td><td>Hot Springs, Canopy, Zip-line, Nature</td></tr>
-                        <tr><td>Guanacaste Beaches</td><td>$220</td><td>Surfing, Resorts, Diving, Fishing</td></tr>
-                        <tr><td>Monteverde Cloud Forest</td><td>$180</td><td>Cloud Forest, Bird watching, Canopy, Wildlife Night Tour</td></tr>
-                        <tr><td>Manuel Antonio National Park</td><td>$180</td><td>Surfing, Wildlife Watching, Beach</td></tr>
-                        <tr><td>Caribbean Coast Tour</td><td>$220</td><td>Tortuguero, Cahuita, Puerto Viejo, Manzanillo</td></tr>
-                        <tr><td>La Paz Waterfalls & Gardens</td><td>$100</td><td>Exotic Animals, Waterfalls, Rainforest</td></tr>
-                        <tr><td>Coffee / Chocolate Tour</td><td>$95</td><td>Grain process, Chocolate making</td></tr>
-                        <tr><td>Poás Volcano National Park</td><td>$120</td><td>Nature, Cloud Forest, Hiking</td></tr>
-                        <tr><td>Tenorio Volcano National Park</td><td>$220</td><td>Cloud Forest, Tubing, Hiking, Horse Riding</td></tr>
+                        <tr><td>Volcán Arenal</td><td>$180</td><td>Aguas termales, Canopy, Tirolina, Naturaleza</td></tr>
+                        <tr><td>Playas de Guanacaste</td><td>$220</td><td>Surf, Resorts, Buceo, Pesca</td></tr>
+                        <tr><td>Bosque Nuboso Monteverde</td><td>$180</td><td>Bosque nuboso, Avistamiento de aves, Canopy, Tour nocturno</td></tr>
+                        <tr><td>Parque Nacional Manuel Antonio</td><td>$180</td><td>Surf, Avistamiento de fauna, Playa</td></tr>
+                        <tr><td>Tour Costa Caribeña</td><td>$220</td><td>Tortuguero, Cahuita, Puerto Viejo, Manzanillo</td></tr>
+                        <tr><td>Cataratas y Jardines de La Paz</td><td>$100</td><td>Animales exóticos, Cascadas, Selva tropical</td></tr>
+                        <tr><td>Tour de Café / Chocolate</td><td>$95</td><td>Proceso del grano, Elaboración de chocolate</td></tr>
+                        <tr><td>Parque Nacional Volcán Poás</td><td>$120</td><td>Naturaleza, Bosque nuboso, Senderismo</td></tr>
+                        <tr><td>Parque Nacional Volcán Tenorio</td><td>$220</td><td>Bosque nuboso, Tubing, Senderismo, Cabalgatas</td></tr>
                     </tbody>
                 </table>
             </section>
         </section>
 
         <!-- About -->
-        <section id="About" class="about">
+        <section id="About" class="about container">
             <div class="about-text">
-                <h2>Why Book With Us</h2>
-                <p>🚐 Comfortable, air-conditioned vehicles</p>
-                <p>🌍 English & Spanish speaking drivers</p>
-                <p>🕒 Flexible schedules – travel at your own pace</p>
-                <p>📸 Stops for photos and local experiences</p>
-                <p>💳 Easy online booking and secure payment</p>
+                <h2>¿Por qué reservar con nosotros?</h2>
+                <p>🚐 Vehículos cómodos y con aire acondicionado</p>
+                <p>🌍 Conductores bilingües (Español e Inglés)</p>
+                <p>🕒 Horarios flexibles – viaja a tu propio ritmo</p>
+                <p>📸 Paradas para fotos y experiencias locales</p>
+                <p>💳 Fácil reserva en línea y respuesta inmediata</p>
             </div>
             <div class="about-image">
-                <img src="aboutus.jpeg" alt="Costa Rica Transport">
+                <img src="aboutus.jpeg" alt="Transporte en Costa Rica">
             </div>
         </section>
 
         <!-- Gallery -->
-        <section id="Gallery">
-            <h2>Gallery & Customer Reviews</h2>
+        <section id="Gallery" class="container">
+            <h2>Galería y Reseñas de Clientes</h2>
             <div class="gallery-section">
-                <h3>Our Adventures</h3>
+                <h3>Nuestras Aventuras</h3>
                 <div class="gallery">
-                    <img src="monocariblanco.jpeg" alt="White-faced monkey in Costa Rica" loading="lazy">
-                    <img src="perezoso.jpeg" alt="Sloth in Costa Rica forest" loading="lazy">
-                    <img src="Tucancollajero.jpeg" alt="Toucan in Costa Rica" loading="lazy">
-                    <img src="serpBocaraca.jpeg" alt="Snake in Costa Rica" loading="lazy">
-                    <img src="tortugas.jpeg" alt="Sea turtles in Costa Rica" loading="lazy">
+                    <img src="monocariblanco.jpeg" alt="Mono cariblanco en Costa Rica" loading="lazy">
+                    <img src="perezoso.jpeg" alt="Perezoso en el bosque de Costa Rica" loading="lazy">
+                    <img src="Tucancollajero.jpeg" alt="Tucán en Costa Rica" loading="lazy">
+                    <img src="serpBocaraca.jpeg" alt="Serpiente oropel en Costa Rica" loading="lazy">
+                    <img src="tortugas.jpeg" alt="Tortugas marinas en Costa Rica" loading="lazy">
                 </div>
             </div>
 
             <div class="Comments-section">
-                <h3>What Our Customers Say</h3>
+                <h3>Lo que dicen nuestros clientes</h3>
                 <div class="comments">
                     <div class="comment">
                         <div class="comment-header">
                             <strong>Ravi Kurupati</strong>
                             <span class="stars">⭐⭐⭐⭐⭐</span>
                         </div>
-                        <p>"Excellent service! The driver was professional and knew all the best spots. Highly recommend. Thanks Hugo for everything, you have been amazing and made our trip so smooth!! Pura Vida until next time!"</p>
+                        <p>"¡Excelente servicio! El conductor fue profesional y conocía los mejores lugares. Muy recomendado. ¡Gracias Hugo por todo, has sido increíble y nuestro viaje fue muy fluido! ¡Pura Vida hasta la próxima!"</p>
                     </div>
                     <div class="comment">
                         <div class="comment-header">
                             <strong>Erin Mo</strong>
                             <span class="stars">⭐⭐⭐⭐⭐</span>
                         </div>
-                        <p>"Best shuttle service in Costa Rica. Safe, clean and friendly bilingual driver. The driver was incredible, we got to see sloths and different Birds on the way to La Fortuna! Just Amazing !"</p>
+                        <p>"El mejor servicio de transporte en Costa Rica. Conductor bilingüe seguro, limpio y amable. ¡El conductor fue increíble, pudimos ver perezosos y diferentes aves en el camino a La Fortuna! ¡Simplemente increíble!"</p>
                     </div>
                     <div class="comment">
                         <div class="comment-header">
                             <strong>Tom Wilson</strong>
                             <span class="stars">⭐⭐⭐⭐⭐</span>
                         </div>
-                        <p>"Amazing experience! The tour to Arenal was unforgettable. Great value for money!"</p>
+                        <p>"¡Experiencia increíble! El tour a Arenal fue inolvidable. ¡Excelente relación calidad-precio!"</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Booking Form -->
-        <section id="Booking">
-            <h2>Plan Your Private Tour Today!<br>Book online and let us take care of the details while you enjoy Costa Rica’s natural wonders.</h2>
-            <form id="bookingForm" class="booking-form" action="https://formspree.io/f/mdagjvby" method="POST">
+        <section id="Booking" class="container">
+            <div class="form-wrapper">
+                <h2>¡Planifica tu tour privado hoy!</h2>
+                <p class="subtitle">Reserva en línea y déjanos encargarnos de los detalles mientras disfrutas de las maravillas naturales de Costa Rica.</p>
+                
+                <form id="bookingForm" class="booking-form" action="https://formspree.io/f/mdagjvby" method="POST">
 
-                <label for="name">Name / Nombre</label>
-                <input type="text" id="name" name="name" required>
+                    <div class="form-group">
+                        <label for="name">Nombre / Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Tu nombre completo">
+                    </div>
 
-                <label for="contact">Email</label>
-                <input type="email" id="contact" name="email" required>
+                    <div class="form-group">
+                        <label for="contact">Correo electrónico / Email *</label>
+                        <input type="email" id="contact" name="email" required placeholder="ejemplo@correo.com">
+                    </div>
 
-                <label for="people">People / Personas</label>
-                <input type="number" id="people" name="people" required>
+                    <div class="form-group">
+                        <label for="people">Número de personas / People *</label>
+                        <input type="number" id="people" name="people" min="1" required placeholder="1">
+                    </div>
 
-                <label for="pickup">Pickup Location / Lugar de Recogida</label>
-                <input type="text" id="pickup" name="pickup" required>
+                    <div class="form-group">
+                        <label for="pickup">Lugar de recogida / Pickup Location *</label>
+                        <input type="text" id="pickup" name="pickup" required placeholder="Hotel o Aeropuerto SJO/LIR">
+                    </div>
 
-                <label for="destination">Destination / Destino</label>
-                <select id="destination" name="destination" required>
-                    <option value="">Select a destination</option>
-                    <option value="Arenal Volcano">Arenal Volcano $180 </option>
-                    <option value="Monteverde">Monteverde $180</option>
-                    <option value="Manuel Antonio">Manuel Antonio $180</option>
-                    <option value="Guanacaste Beaches">Guanacaste Beaches $220</option>
-                    <option value="Caribbean Coast $220">Caribbean Coast $220</option>
-                    <option value="Poás Volcano">Poás Volcano $120</option>
-                    <option value="San Jose International Airport">San Jose International Airport - GET A QUOTE!</option>
-                    <option value="Liberia International Airport">Liberia International Airport $220</option>
-                    <option value="Sansa Domestic Flights">Sansa Domestic Flights - GET A QUOTE!</option>
-                    <option value="Other">Other specified</option>
-                </select>
+                    <div class="form-group">
+                        <label for="destination">Destino / Destination *</label>
+                        <select id="destination" name="destination" required>
+                            <option value="">Seleccione un destino</option>
+                            <option value="Arenal Volcano">Volcán Arenal $180</option>
+                            <option value="Monteverde">Monteverde $180</option>
+                            <option value="Manuel Antonio">Manuel Antonio $180</option>
+                            <option value="Guanacaste Beaches">Playas de Guanacaste $220</option>
+                            <option value="Caribbean Coast">Costa Caribeña $220</option>
+                            <option value="Poás Volcano">Volcán Poás $120</option>
+                            <option value="San Jose International Airport">Aeropuerto Internacional San José - ¡COTIZAR!</option>
+                            <option value="Liberia International Airport">Aeropuerto Internacional Liberia $220</option>
+                            <option value="Sansa Domestic Flights">Vuelos Domésticos Sansa - ¡COTIZAR!</option>
+                            <option value="Other">Otro destino especificado</option>
+                        </select>
+                    </div>
 
-                <div id="other-destination-container" style="display:none; margin-top:10px;">
-                    <label for="other-destination">Please specify your destination / Por favor especifique su destino</label>
-                    <input type="text" id="other-destination" name="other-destination">
-                </div>
+                    <div id="other-destination-container" class="form-group" style="display:none;">
+                        <label for="other-destination">Por favor especifique su destino / Please specify your destination *</label>
+                        <input type="text" id="other-destination" name="other-destination" placeholder="Escribe tu destino deseado">
+                    </div>
 
-                <label for="message">Additional Notes / Mensaje adicional</label>
-                <textarea id="message" name="message" placeholder="Any extra info or drop-off details..."></textarea>
+                    <div class="form-group">
+                        <label for="message">Mensaje adicional / Additional Notes</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Cualquier información extra o detalles de llegada..."></textarea>
+                    </div>
 
-                <label for="date">Date / Fecha</label>
-                <input type="date" id="date" name="date" required>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="date">Fecha / Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
 
-                <label for="time">Time / Hora</label>
-                <input type="time" id="time" name="time" required>
+                        <div class="form-group half">
+                            <label for="time">Hora / Time *</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                    </div>
 
-                <!-- Campos ocultos esenciales para Formspree -->
-                <input type="hidden" name="_subject" value="New Shuttle Booking Request - Sarchí Travel Express">
-                <input type="hidden" name="_next" value="https://sarchitravelexpress.com/thanks.html">
+                    <!-- Campos ocultos para Formspree -->
+                    <input type="hidden" name="_subject" value="Nueva Solicitud de Reserva - Sarchí Travel Express">
+                    <input type="hidden" name="_next" value="https://sarchitravelexpress.com/thanks.html">
 
-                <!-- Botones organizados -->
-                <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px;">
-                    <button type="submit" class="btn-submit" style="flex: 1;">📧 Confirm Booking / Enviar por Correo</button>
-                    <button type="button" class="btn-submit" id="btnWhatsApp" onclick="enviarWhatsApp()" style="flex: 1; background-color: #25d366;">📲 Send to WhatsApp</button>
-                </div>
+                    <!-- Botones -->
+                    <div class="button-group">
+                        <button type="submit" class="btn-submit btn-email">📧 Confirmar Reserva / Enviar por Correo</button>
+                        <button type="button" class="btn-submit btn-whatsapp" onclick="enviarWhatsApp()">📲 Enviar por WhatsApp</button>
+                    </div>
 
-                <p class="trust-message">✅ Secure Booking – We reply within 15 minutes</p>
-            </form>
+                    <p class="trust-message">✅ Reserva Segura – Respondemos en menos de 15 minutos</p>
+                </form>
+            </div>
         </section>
 
         <!-- Contact -->
-        <section id="Contact">
-            <h2>Contact Us</h2>
-            <p>WhatsApp: +506 62787703</p>
-            <p>Email: hugo.andres99@hotmail.com</p>
-            <p>Address: Sarchí Norte, Alajuela, Costa Rica</p>
+        <section id="Contact" class="container contact-section">
+            <h2>Contáctenos</h2>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/50662787703" target="_blank">+506 62787703</a></p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:hugo.andres99@hotmail.com">hugo.andres99@hotmail.com</a></p>
+            <p><strong>Dirección:</strong> Sarchí Norte, Alajuela, Costa Rica</p>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>© 2026 Sarchí Travel Express. All rights reserved.</p>
+            <p>© 2026 Sarchí Travel Express. Todos los derechos reservados.</p>
         </footer>
 
-        <!-- WhatsApp & Form Redirect Script -->
+        <!-- JavaScript Interactivo -->
         <script>
-            // Evitar fechas pasadas en el campo "date"
+            // Alternar Menú Hamburguesa en móviles
+            function toggleMenu() {
+                const nav = document.getElementById("main-nav");
+                nav.classList.toggle("active");
+            }
+
+            function closeMenu() {
+                const nav = document.getElementById("main-nav");
+                nav.classList.remove("active");
+            }
+
+            // Deshabilitar fechas pasadas en el selector de fechas
             const today = new Date().toISOString().split("T")[0];
             document.getElementById("date").setAttribute("min", today);
 
-            // Mostrar u ocultar campo de otro destino si seleccionan "Other"
+            // Mostrar u ocultar el campo "Otro destino"
             document.getElementById("destination").addEventListener("change", function() {
                 const otherContainer = document.getElementById("other-destination-container");
                 if (this.value === "Other") {
@@ -333,19 +400,16 @@
                 }
             });
 
-            // Enviar formulario a Formspree mediante AJAX y redirigir a thanks.html
+            // Enviar formulario Formspree vía AJAX
             const form = document.getElementById("bookingForm");
             form.addEventListener("submit", function(e) {
                 e.preventDefault();
-                
                 const formData = new FormData(form);
                 
                 fetch(form.action, {
                     method: "POST",
                     body: formData,
-                    headers: {
-                        'Accept': 'json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 }).then(response => {
                     if (response.ok) {
                         window.location.href = "thanks.html";
@@ -357,6 +421,7 @@
                 });
             });
 
+            // Función para enviar los datos directamente a WhatsApp
             function enviarWhatsApp() {
                 const name = document.getElementById("name").value;
                 const contact = document.getElementById("contact").value;
@@ -366,10 +431,14 @@
                 const date = document.getElementById("date").value;
                 const time = document.getElementById("time").value;
 
+                if (!name || !contact || !pickup || !destination || !date || !time) {
+                    alert("Por favor completa los campos principales antes de enviar por WhatsApp.");
+                    return;
+                }
+
                 const finalDestination = destination === "Other" ? otherDestination : destination;
                 const companyNumber = "50662787703";
-
-                const message = `Shuttle Booking Request:\n\n👤 Name: ${name}\n📧 Contact: ${contact}\n📍 Pickup: ${pickup}\n🎯 Destination: ${finalDestination}\n📅 Date: ${date}\n⏰ Time: ${time}`;
+                const message = `Solicitud de Reserva Shuttle:\n\n👤 Nombre: ${name}\n📧 Contacto: ${contact}\n📍 Recogida: ${pickup}\n🎯 Destino: ${finalDestination}\n📅 Fecha: ${date}\n⏰ Hora: ${time}`;
 
                 const url = `https://wa.me/${companyNumber}?text=${encodeURIComponent(message)}`;
                 window.open(url, "_blank");
