@@ -328,7 +328,7 @@ h2 {
 .comment p {
   font-size: 0.95rem;
   color: #444;
-  line-align: 1.4;
+  line-height: 1.4;
 }
 
 /* Booking Form */
@@ -371,7 +371,7 @@ h2 {
 }
 
 .btn-submit:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-primary);
 }
 
 .trust-message {
