@@ -360,7 +360,7 @@ h2 {
   width: 48%;
   padding: 12px;
   margin: 8px 1%;
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -371,7 +371,7 @@ h2 {
 }
 
 .btn-submit:hover {
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
 }
 
 .trust-message {
@@ -419,7 +419,7 @@ h2 {
 }
 
 footer {
-  background: var(--color-primary);
+  background: var(--color-primary-dark);
   color: #fff;
   text-align: center;
   padding: 15px;
