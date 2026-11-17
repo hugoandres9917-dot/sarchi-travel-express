@@ -118,7 +118,7 @@ nav ul li a:hover {
 /* Hero */
 .hero {
   position: relative;
-  background: url('pictures/LOGO.jpeg') center/cover no-repeat;
+  background: url('pictures/LOGO.PNG') center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 200px 20px;
