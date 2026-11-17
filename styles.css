@@ -10,12 +10,13 @@
 }
 
 /* Variables de color */
+/* Variables de color */
 :root {
-  --color-primary: #00695c;
-  --color-primary-dark: #004d40;
-  --color-accent: #f77f00;
+  --color-primary: #b85d33;       /* Terracota cálido / color madera de Sarchí */
+  --color-primary-dark: #9c411a;  /* Terracota oscuro para hovers y footer */
+  --color-accent: #2a9d8f;        /* Verde turquesa suave como acento contrastante */
   --color-red: #d62828;
-  --color-blue: #003049;
+  --color-blue: #264653;          /* Azul petróleo elegante */
   --color-bg: #f9f9f9;
 }
 
