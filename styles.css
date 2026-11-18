@@ -10,8 +10,6 @@
 }
 
 /* Variables de color */
-/* Variables de color */
-/* Variables de color */
 :root {
   --color-primary: #b85d33;       /* Terracota cálido para los títulos (h2, h3) */
   --color-primary-dark: #9c411a;  /* Terracota oscuro para hovers y footer */
@@ -216,7 +214,7 @@ h2 {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 18px;
-  background: var(--color-btn-green); /* Ahora será verde */
+  background: var(--color-btn-green);
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
@@ -224,27 +222,7 @@ h2 {
 }
 
 .destination .btn:hover {
-  background: var(--color-btn-green-dark); /* Verde más oscuro al pasar el mouse */
-}
-
-/* Botón de envío del formulario (Booking) */
-.btn-submit {
-  display: inline-block;
-  width: 48%;
-  padding: 12px;
-  margin: 8px 1%;
-  background: var(--color-btn-green); /* Ahora será verde */
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-submit:hover {
-  background: var(--color-btn-green-dark); /* Verde más oscuro al pasar el mouse */
+  background: var(--color-btn-green-dark);
 }
 
 /* Tabla de destinos */
@@ -379,12 +357,13 @@ h2 {
   font-size: 1rem;
 }
 
+/* Botón de envío del formulario (Booking) */
 .btn-submit {
   display: inline-block;
   width: 48%;
   padding: 12px;
   margin: 8px 1%;
-  background: var(--color-primary-dark);
+  background: var(--color-btn-green);
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -395,7 +374,7 @@ h2 {
 }
 
 .btn-submit:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-btn-green-dark);
 }
 
 .trust-message {
