@@ -10,9 +10,10 @@
 }
 
 /* Variables de color */
+/* Variables de color */
 :root {
-  --color-primary: #b85d33;       /* Terracota cálido para los títulos (h2, h3) */
-  --color-primary-dark: #9c411a;  /* Terracota oscuro para hovers y footer */
+  --color-primary: #0077b6;       /* Azul caribe brillante para los títulos (h2, h3) y acentos */
+  --color-primary-dark: #03045e;  /* Azul oscuro profundo para hovers y footer */
   --color-btn-green: #00695c;     /* Verde principal para los botones */
   --color-btn-green-dark: #004d40;/* Verde oscuro para el hover de los botones */
   --color-accent: #2a9d8f;        /* Verde turquesa suave como acento */
